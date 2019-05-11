@@ -258,6 +258,8 @@ contains
                   + x2i(index_x2i_Faxa_dstwet4,n) &
                   + x2i(index_x2i_Faxa_dstdry4,n)
 
+             faero_atm(i,j,4,iblk) = x2i(index_x2i_Faxa_xtFe,n)
+
              if (index_x2i_Sa_shum_HDO > 0) then
 
              Qa_iso(i,j,1,iblk)  = x2i(index_x2i_Sa_shum_HDO,n)
@@ -558,6 +560,10 @@ contains
                  i2x(index_i2x_Fioi_bcphi ,n)  = faero_ocn(i,j,2,iblk)  ! hydrophilic bc
                 if ( index_i2x_Fioi_flxdst > 0) &
                  i2x(index_i2x_Fioi_flxdst,n)  = faero_ocn(i,j,3,iblk)  ! dust
+
+                 if ( index_i2x_Fioi_xtFe_ice_rxn > 0) &
+                  i2x(index_i2x_Fioi_xtFe_ice_rxn,n)  = faero_ocn(i,j,4,iblk)  ! Fe
+
 
                 if (index_i2x_Fioi_meltw_HDO > 0) then
 

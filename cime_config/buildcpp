@@ -98,7 +98,7 @@ def buildcpp(case):
     if cice_mode == 'prescribed':
         ntr_aero = 0
     else:
-        ntr_aero = 3
+        ntr_aero = 4
     ntr_aero = set_nondefault_cpp(cice_config_opts, "ntr_aero", ntr_aero)
 
     # set number of bgc tracers (valid values are 0->10)
